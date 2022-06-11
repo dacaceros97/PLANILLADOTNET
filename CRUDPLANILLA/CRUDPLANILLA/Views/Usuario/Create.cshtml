@@ -1,0 +1,68 @@
+﻿@model CRUDPLANILLA.Models.Usuario
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Usuario</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Nombre" class="control-label"></label>
+                <input asp-for="Nombre" class="form-control" />
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Apellidos" class="control-label"></label>
+                <input asp-for="Apellidos" class="form-control" />
+                <span asp-validation-for="Apellidos" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UsuarioLogin" class="control-label"></label>
+                <input asp-for="UsuarioLogin" class="form-control" />
+                <span asp-validation-for="UsuarioLogin" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PasswordLogin" class="control-label"></label>
+                <input asp-for="PasswordLogin" class="form-control" />
+                <span asp-validation-for="PasswordLogin" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NoDPI" class="control-label"></label>
+                <input asp-for="NoDPI" class="form-control" />
+                <span asp-validation-for="NoDPI" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SalarioBase" class="control-label"></label>
+                <input asp-for="SalarioBase" class="form-control" />
+                <span asp-validation-for="SalarioBase" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BonoDecreto" class="control-label"></label>
+                <input asp-for="BonoDecreto" class="form-control" />
+                <span asp-validation-for="BonoDecreto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FechaNacimiento" class="control-label"></label>
+                <input asp-for="FechaNacimiento" class="form-control" />
+                <span asp-validation-for="FechaNacimiento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

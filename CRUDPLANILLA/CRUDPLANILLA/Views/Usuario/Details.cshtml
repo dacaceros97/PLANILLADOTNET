@@ -1,0 +1,66 @@
+﻿@model CRUDPLANILLA.Models.Usuario
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Usuario</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Apellidos)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Apellidos)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.UsuarioLogin)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.UsuarioLogin)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PasswordLogin)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PasswordLogin)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NoDPI)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NoDPI)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SalarioBase)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SalarioBase)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BonoDecreto)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BonoDecreto)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FechaNacimiento)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FechaNacimiento)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.IdUsuario">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

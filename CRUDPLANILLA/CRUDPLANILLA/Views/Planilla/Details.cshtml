@@ -1,0 +1,48 @@
+﻿@model CRUDPLANILLA.Models.Planilla
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Planilla</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Id_Usuario)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Id_Usuario)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IGSS)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IGSS)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IRTRA)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IRTRA)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SalarioTotal)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SalarioTotal)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SalarioLiquido)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SalarioLiquido)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id_Registro">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

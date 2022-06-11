@@ -1,0 +1,54 @@
+﻿@model CRUDPLANILLA.Models.Planilla
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Planilla</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id_Registro" />
+            <div class="form-group">
+                <label asp-for="Id_Usuario" class="control-label"></label>
+                <input asp-for="Id_Usuario" class="form-control" />
+                <span asp-validation-for="Id_Usuario" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IGSS" class="control-label"></label>
+                <input asp-for="IGSS" class="form-control" />
+                <span asp-validation-for="IGSS" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IRTRA" class="control-label"></label>
+                <input asp-for="IRTRA" class="form-control" />
+                <span asp-validation-for="IRTRA" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SalarioTotal" class="control-label"></label>
+                <input asp-for="SalarioTotal" class="form-control" />
+                <span asp-validation-for="SalarioTotal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SalarioLiquido" class="control-label"></label>
+                <input asp-for="SalarioLiquido" class="form-control" />
+                <span asp-validation-for="SalarioLiquido" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
